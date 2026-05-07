@@ -1,21 +1,54 @@
-body{
-    margin: 0;
-    background-color: rgb(29, 28, 28);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    min-height:700px ;
-    flex-direction: column;
+body {
+  margin: 0;
+  background-color: rgb(29, 28, 28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  min-height: 700px;
+  flex-direction: column;
 }
 
-.main-chat{
-    display: flex;
-    justify-content:space-between;
-    width:45% ;
-    height: 50px;
-    background-color:rgb(62, 60, 60) ;
-    border-radius:23px;
+.main-chat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  height: 57px;
+  background-color: rgb(62, 60, 60);
+  border-radius: 23px;
 }
 
+input {
+  margin: 4px 0 0 0;
+  flex-grow: 1;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+  font: 1em sans-serif;
+}
+
+.add-btn,
+.voice,
+.send {
+  margin: 0 10px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 30px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 40%;
+}
+
+.add-btn:hover,
+.voice:hover {
+  background-color: grey;
+}
+
+.send {
+  display: none;
+}
