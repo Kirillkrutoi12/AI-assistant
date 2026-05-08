@@ -13,10 +13,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width:min(90%,700px);
   height: 57px;
   background-color: rgb(62, 60, 60);
   border-radius: 23px;
+  min-height: 57px;
+  padding: 0.1rem;
 }
 
 input {
