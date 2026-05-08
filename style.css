@@ -4,9 +4,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  min-height: 700px;
   flex-direction: column;
 }
 
@@ -57,4 +56,15 @@ input {
   color: white;
   margin: 30px;
   font-size: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.AI-name {
+  color: white;
+  position: absolute;
+  top: 50px;
 }
