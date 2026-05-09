@@ -32,8 +32,7 @@ input {
 }
 
 .add-btn,
-.voice,
-.send {
+.voice {
   margin: 0 10px;
   background: none;
   color: white;
@@ -46,11 +45,22 @@ input {
 }
 
 .add-btn:hover,
-.voice:hover {
+.voice:hover,
+.send:hover {
   background-color: grey;
 }
 
 .send {
+  margin: 0 10px;
+  background-color: rgb(152, 155, 150);
+  color: white;
+  border: none;
+  font-size: 22px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 40%;
+  padding-bottom: 5px;
   display: none;
 }
 
