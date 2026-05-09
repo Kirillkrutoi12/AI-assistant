@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width:min(90%,700px);
+  width: min(90%, 700px);
   height: 57px;
   background-color: rgb(62, 60, 60);
   border-radius: 23px;
@@ -68,5 +68,31 @@ header {
 .AI-name {
   color: white;
   position: absolute;
-  top: 50px;
+  top: 10px;
+}
+
+.dialog {
+  display: flex;
+  width: min(90%, 680px);
+  min-height: 80vh;
+  justify-content: space-between;
+  display: none;
+}
+
+.user,
+.chatbot {
+  height: 5%;
+  background-color: rgb(62, 60, 60);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.user {
+  margin: 80px 0 40px 0;
+}
+
+.user-message,
+.chatbot-message {
+  color: white;
+  font: 1em sans-serif;
 }
