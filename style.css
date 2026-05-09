@@ -61,7 +61,6 @@ input {
   cursor: pointer;
   border-radius: 40%;
   padding-bottom: 5px;
-  display: none;
 }
 
 .interaction {
@@ -105,4 +104,8 @@ header {
 .chatbot-message {
   color: white;
   font: 1em sans-serif;
+}
+
+.hidden {
+  display: none;
 }
