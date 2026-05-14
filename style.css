@@ -46,11 +46,11 @@ input {
 
 .add-btn:hover,
 .voice:hover,
-.send:hover {
+.sendButton:hover {
   background-color: grey;
 }
 
-.send {
+.sendButton {
   margin: 0 10px;
   background-color: rgb(152, 155, 150);
   color: white;
@@ -66,7 +66,7 @@ input {
 .interaction {
   color: white;
   margin: 30px;
-  font-size: 30px;
+  font-size: 26px;
 }
 
 header {
@@ -78,6 +78,7 @@ header {
   color: white;
   position: absolute;
   top: 10px;
+  font-weight: bold;
 }
 
 .dialog {
