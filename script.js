@@ -2,6 +2,8 @@ const userInput = document.querySelector(".user-input");
 const voice = document.querySelector(".voice");
 const sendButton = document.querySelector(".sendButton");
 const interaction = document.querySelector(".interaction");
+const mainChat = document.querySelector(".main-chat");
+const dialog = document.querySelector(".dialog");
 
 const interactionMessage = [
   "Hello user!",
@@ -27,4 +29,11 @@ const changeButton = () => {
   }
 };
 
+const startDialog = () => {
+  interaction.classList.add("hidden");
+  document.body.classList.add("chat-started");
+  dialog.classList.remove("hidden");
+};
+
 userInput.addEventListener("input", changeButton);
+sendButton.addEventListener("click", startDialog);

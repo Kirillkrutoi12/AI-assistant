@@ -2,11 +2,15 @@ body {
   margin: 0;
   background-color: rgb(29, 28, 28);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   min-height: 100vh;
   width: 100%;
   flex-direction: column;
+}
+
+body.chat-started {
+  justify-content: space-between;
 }
 
 .main-chat {
@@ -19,6 +23,7 @@ body {
   border-radius: 23px;
   min-height: 57px;
   padding: 0.1rem;
+  margin-bottom: 15px;
 }
 
 input {
@@ -78,27 +83,35 @@ header {
   color: white;
   position: absolute;
   top: 10px;
+  left: 100px;
   font-weight: bold;
+  font-size: 20px;
 }
 
 .dialog {
   display: flex;
   width: min(90%, 680px);
-  min-height: 80vh;
+  min-height: 30vh;
   justify-content: space-between;
-  display: none;
+  flex-direction: column;
 }
 
 .user,
 .chatbot {
   height: 5%;
   background-color: rgb(62, 60, 60);
-  padding: 5px;
+  padding: 1px 10px 0 10px;
   border-radius: 15px;
 }
 
 .user {
-  margin: 80px 0 40px 0;
+  margin: 30px 0 10px 0;
+  align-self: flex-end;
+  max-width: 60%;
+}
+
+.chatbot {
+  align-self: flex-start;
 }
 
 .user-message,
