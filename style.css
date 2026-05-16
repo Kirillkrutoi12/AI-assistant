@@ -91,7 +91,7 @@ header {
 .dialog {
   display: flex;
   width: min(90%, 680px);
-  min-height: 30vh;
+  min-height: 20vh;
   justify-content: space-between;
   flex-direction: column;
 }
