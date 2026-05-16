@@ -50,6 +50,8 @@ const startDialog = () => {
   dialog.appendChild(userDiv);
   dialog.appendChild(ChatBotDiv);
 
+  window.scrollTo(0, document.body.scrollHeight);
+
   const userInputValue = userInput.value;
   userMessage.textContent = userInputValue;
 

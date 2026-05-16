@@ -23,7 +23,9 @@ body.chat-started {
   border-radius: 23px;
   min-height: 57px;
   padding: 0.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  position: sticky;
 }
 
 input {
@@ -91,8 +93,6 @@ header {
 .dialog {
   display: flex;
   width: min(90%, 680px);
-  min-height: 20vh;
-  justify-content: space-between;
   flex-direction: column;
 }
 
