@@ -4,7 +4,6 @@ const sendButton = document.querySelector(".sendButton");
 const interaction = document.querySelector(".interaction");
 const mainChat = document.querySelector(".main-chat");
 const dialog = document.querySelector(".dialog");
-const userMessage = document.querySelector(".user-message");
 
 const interactionMessage = [
   "Hello user!",
@@ -35,11 +34,27 @@ const startDialog = () => {
   document.body.classList.add("chat-started");
   dialog.classList.remove("hidden");
 
+  const userDiv = document.createElement("div");
+  userDiv.classList.add("user");
+  const userMessage = document.createElement("p");
+  userMessage.classList.add("user-message");
+  userDiv.appendChild(userMessage);
+
+  const ChatBotDiv = document.createElement("div");
+  ChatBotDiv.classList.add("chatbot");
+  const chatbotMessage = document.createElement("p");
+  chatbotMessage.classList.add("chatbot-message");
+  chatbotMessage.textContent = "answer"; // подключить Groq API чтобы chatbotMessage заполнялся реальным ответом, а не заглушкой.
+  ChatBotDiv.appendChild(chatbotMessage);
+
+  dialog.appendChild(userDiv);
+  dialog.appendChild(ChatBotDiv);
+
   const userInputValue = userInput.value;
   userMessage.textContent = userInputValue;
 
   userInput.value = "";
-  
+
   changeButton();
 };
 
