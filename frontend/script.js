@@ -48,23 +48,29 @@ const startDialog = async () => {
 
   dialog.appendChild(userDiv);
   dialog.appendChild(ChatBotDiv);
+  try {
+    const response = await fetch("http://localhost:3000/server", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        content: userInput.value,
+      }),
+    });
 
-  const URL = "https://api.groq.com/openai/v1/chat/completions";
-  const response = await fetch(URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization:
-        "Bearer REMOVED",
-    },
-    body: JSON.stringify({
-      model: "llama-3.1-8b-instant",
-      messages: [{ role: "user", content: userInput.value }],
-    }),
-  });
-  const data = await response.json();
-  chatbotMessage.textContent = data.choices[0].message.content; 
-  console.log(data);
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error("API error");
+    }
+
+    chatbotMessage.textContent = data.choices[0].message.content;
+  } catch (error) {
+    chatbotMessage.textContent = "Something went wrong.";
+
+    console.log(error);
+  }
 
   window.scrollTo(0, document.body.scrollHeight);
 
