@@ -72,7 +72,7 @@ input {
 
 .interaction {
   color: white;
-  margin: 30px;
+  margin: 10px;
   font-size: 26px;
 }
 
@@ -99,7 +99,6 @@ header {
 .user,
 .chatbot {
   height: 5%;
-  background-color: rgb(62, 60, 60);
   padding: 1px 10px 0 10px;
   border-radius: 15px;
 }
@@ -108,10 +107,12 @@ header {
   margin: 30px 0 10px 0;
   align-self: flex-end;
   max-width: 60%;
+  background-color: rgb(62, 60, 60);
 }
 
 .chatbot {
   align-self: flex-start;
+  margin-top: 15px;
 }
 
 .user-message,

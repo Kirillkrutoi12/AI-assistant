@@ -29,7 +29,7 @@ const changeButton = () => {
   }
 };
 
-const startDialog = () => {
+const startDialog = async () => {
   interaction.classList.add("hidden");
   document.body.classList.add("chat-started");
   dialog.classList.remove("hidden");
@@ -44,11 +44,27 @@ const startDialog = () => {
   ChatBotDiv.classList.add("chatbot");
   const chatbotMessage = document.createElement("p");
   chatbotMessage.classList.add("chatbot-message");
-  chatbotMessage.textContent = "answer"; // подключить Groq API чтобы chatbotMessage заполнялся реальным ответом, а не заглушкой.
   ChatBotDiv.appendChild(chatbotMessage);
 
   dialog.appendChild(userDiv);
   dialog.appendChild(ChatBotDiv);
+
+  const URL = "https://api.groq.com/openai/v1/chat/completions";
+  const response = await fetch(URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:
+        "Bearer REMOVED",
+    },
+    body: JSON.stringify({
+      model: "llama-3.1-8b-instant",
+      messages: [{ role: "user", content: userInput.value }],
+    }),
+  });
+  const data = await response.json();
+  chatbotMessage.textContent = data.choices[0].message.content; 
+  console.log(data);
 
   window.scrollTo(0, document.body.scrollHeight);
 
