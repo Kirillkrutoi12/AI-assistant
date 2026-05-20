@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI</title>
+    <!--I will change it latter (so the title will be the conversation topic in ai chat)-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p class="AI-name">Llama</p>
+
+    <p class="interaction"></p>
+    <!--user will be changed in actual user nickname for better mobility-->
+    <div class="dialog hidden">
+      <!--<div class="user">
+        <p class="user-message"></p>
+      </div>
+      <div class="chatbot">
+        <p class="chatbot-message"></p>
+      </div>-->
+    </div>
+    <div class="main-chat">
+      <button class="add-btn">+</button>
+      <input
+        type="text"
+        placeholder="Nachricht schreiben..."
+        class="user-input"
+      />
+      <button class="voice">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 21 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="inline-block overflow-visible"
+        >
+          <rect
+            x="0"
+            y="7.5"
+            height="6px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+          <rect
+            x="4"
+            y="5.5"
+            height="10px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+          <rect
+            x="8"
+            y="2.5"
+            height="16px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+          <rect
+            x="12"
+            y="5.5"
+            height="10px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+          <rect
+            x="16"
+            y="2.5"
+            height="16px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+          <rect
+            x="20"
+            y="7.5"
+            height="7px"
+            fill="currentColor"
+            fill-opacity="1"
+            width="1px"
+            rx="0.5"
+            ry="0.5"
+          ></rect>
+        </svg>
+      </button>
+      <button class="sendButton hidden">↑</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
