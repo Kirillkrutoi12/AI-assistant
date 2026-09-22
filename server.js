@@ -20,7 +20,7 @@ app.post("/server", async (req, res) => {
         Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "llama-3.1-8b-instant", // current version
+        model: "llama-3.3-70b-versatile", // current verson
         messages: [{ role: "user", content: message }],
       }),
     });
