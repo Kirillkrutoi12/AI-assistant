@@ -20,14 +20,15 @@ app.post("/server", async (req, res) => {
         Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
       },
       body: JSON.stringify({
-        model: "llama-3.1-8b-instant",
+        model: "llama-3.1-8b-instant", // current version
         messages: [{ role: "user", content: message }],
       }),
     });
     const data = await response.json();
-    res.json(data);
+    res.status(response.status).json(data);
   } catch (error) {
     console.error(error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 

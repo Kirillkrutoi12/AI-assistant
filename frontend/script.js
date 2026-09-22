@@ -83,4 +83,11 @@ const startDialog = async () => {
 };
 
 userInput.addEventListener("input", changeButton);
+userInput.addEventListener("input", changeButton);
 sendButton.addEventListener("click", startDialog);
+userInput.addEventListener("keydown", (event) => {
+  if (event.key === "Enter" && userInput.value.trim() !== "") {
+    event.preventDefault();
+    startDialog();
+  }
+});
